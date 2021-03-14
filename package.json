@@ -1,0 +1,31 @@
+{
+  "name": "doosan-frontend",
+  "version": "0.0.1",
+  "description": "Doosan Motor Car Inspection Service",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/halsoo/doosanmotor_frontend.git"
+  },
+  "author": "UKGU",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/halsoo/doosanmotor_frontend/issues"
+  },
+  "homepage": "https://github.com/halsoo/doosanmotor_frontend#readme",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "10.0.8",
+    "react": "17.0.1",
+    "react-dom": "17.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.8",
+    "tailwindcss": "^2.0.3"
+  }
+}
