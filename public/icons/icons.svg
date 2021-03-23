@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <symbol id="black-arrow" width="24" height="24" viewBox="0 0 24 24">
+        <g fill="current" fill-rule="evenodd">
+            <g>
+                <path d="M0 0L24 0 24 24 0 24z"/>
+                <path fill="#123" fill-rule="nonzero" d="M20 11L7.83 11 13.42 5.41 12 4 4 12 12 20 13.41 18.59 7.83 13 20 13z"/>
+            </g>
+        </g>
+    </symbol>
+
+    <symbol id="backward" viewBox="0 0 24 24">
+        <path fill="current" fill-rule="nonzero" d="M15.41 16.59L10.83 12 15.41 7.41 14 6 8 12 14 18z"/>   
+    </symbol>
+
+    <symbol id="block" width="24" height="24" viewBox="0 0 24 24">
+        <g fill="current" fill-rule="evenodd">
+            <g>
+                <path d="M0 0L24 0 24 24 0 24z"/>
+                <path fill="#123" fill-rule="nonzero" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z"/>
+            </g>
+        </g>
+    </symbol>
+
+    <symbol id="cal" viewBox="0 0 24 24">
+        <path fill="current" fill-rule="nonzero" d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
+    </symbol>
+    
+    <symbol id="check" viewBox="0 0 24 24">
+        <path fill="current" fill-rule="nonzero" d="M9 16.2L4.8 12 3.4 13.4 9 19 21 7 19.6 5.6z"/>
+    </symbol>
+    
+    <symbol id="checkbox-off" width="24" height="24" viewBox="0 0 24 24">
+        <defs>
+            <filter id="b3dw6ls32a">
+                <feColorMatrix in="SourceGraphic" values="0 0 0 0 0.066355 0 0 0 0 0.132985 0 0 0 0 0.199615 0 0 0 1.000000 0"/>
+            </filter>
+        </defs>
+        <g fill="current" fill-rule="evenodd">
+            <g filter="url(#b3dw6ls32a)">
+                <path d="M0 0L24 0 24 24 0 24z"/>
+                <path fill="#000" fill-rule="nonzero" d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
+            </g>
+        </g>
+    </symbol>
+    
+    <symbol id="checkbox-on" width="24" height="24" viewBox="0 0 24 24">
+        <defs>
+            <filter id="9djpgz7mja">
+                <feColorMatrix in="SourceGraphic" values="0 0 0 0 0.066355 0 0 0 0 0.132985 0 0 0 0 0.199615 0 0 0 1.000000 0"/>
+            </filter>
+        </defs>
+        <g fill="current" fill-rule="evenodd">
+            <g filter="url(#9djpgz7mja)">
+                <path d="M0 0L24 0 24 24 0 24z"/>
+                <path fill="#000" fill-rule="nonzero" d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </g>
+        </g>
+    </symbol>
+    
+    <symbol id="done" width="48" height="48" viewBox="0 0 48 48">
+        <defs>
+            <filter id="ucb809tcea">
+                <feColorMatrix in="SourceGraphic" values="0 0 0 0 0.298039 0 0 0 0 0.431373 0 0 0 0 0.960784 0 0 0 1.000000 0"/>
+            </filter>
+        </defs>
+        <g fill="current" fill-rule="evenodd">
+            <g filter="url(#ucb809tcea)">
+                <path d="M0 0L48 0 48 48 0 48z"/>
+                <path fill="#000" fill-rule="nonzero" d="M36 14l-2.82-2.82L20.5 23.86l2.82 2.82L36 14zm8.48-2.82L23.32 32.34 14.96 24l-2.82 2.82L23.32 38l24-24-2.84-2.82zM.82 26.82L12 38l2.82-2.82L3.66 24 .82 26.82z"/>
+            </g>
+        </g>
+    </symbol>
+    
+    <symbol id="expand" width="24" height="24" viewBox="0 0 24 24">
+        <g fill="current" fill-rule="evenodd">
+            <g>
+                <path d="M0 0L24 0 24 24 0 24z" transform="rotate(-90 12 12)"/>
+                <path fill="#123" fill-rule="nonzero" d="M15.41 16.59L10.83 12 15.41 7.41 14 6 8 12 14 18z" transform="rotate(-90 12 12)"/>
+            </g>
+        </g>
+    </symbol>
+    
+    <symbol id="forward" viewBox="0 0 24 24">
+            <path fill="current" fill-rule="nonzero" d="M15.41 16.59L10.83 12 15.41 7.41 14 6 8 12 14 18z" transform="matrix(-1 0 0 1 24 0)"/>
+    </symbol>
+    
+    <symbol id="info" viewBox="0 0 24 24">
+        <g fill="current" fill-rule="evenodd">
+            <path fill="#123" fill-rule="nonzero" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+        </g>
+    </symbol>
+    
+    <symbol id="kakao" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+        <defs>
+            <path id="r182hix9ga" d="M0 0.585L19.264 0.585 19.264 20.652 0 20.652z"/>
+        </defs>
+        <g fill="current" fill-rule="evenodd">
+            <g transform="translate(3 2)">
+                <mask id="f9t0u27cbb" fill="#fff">
+                    <use xlink:href="#r182hix9ga"/>
+                </mask>
+                <path fill="#123" d="M15.605 12.77h-1.28V9.928c0-.655-.387-1.006-.982-1.006-.664 0-1.091.4-1.091 1.211v2.639h-1.28V5.816h1.28v2.616c.307-.46.804-.684 1.478-.684.546 0 .992.176 1.34.537.357.362.535.85.535 1.486v3zm-9.202-1.186c.945 0 1.752-.557 1.995-1.417h1.397c-.342 1.655-1.65 2.74-3.392 2.74-2.024 0-3.63-1.487-3.63-3.556 0-2.07 1.606-3.557 3.63-3.557 1.76 0 3.077 1.106 3.402 2.79H8.412C8.2 7.668 7.365 7.098 6.403 7.098c-1.36 0-2.266.956-2.266 2.253 0 1.296 1.03 2.233 2.266 2.233zM9.633.585C4.312.585 0 4.515 0 9.36c0 3.58 1.522 5.288 3.607 6.846l.01.004v4.2c0 .199.229.313.39.194l3.653-2.672.079.033c.612.112 1.245.17 1.893.17 5.32 0 9.632-3.928 9.632-8.775 0-4.846-4.312-8.775-9.632-8.775z" mask="url(#f9t0u27cbb)"/>
+            </g>
+        </g>
+    </symbol>
+    
+    <symbol id="menu" viewBox="0 0 24 24">
+        <path fill="current" fill-rule="nonzero" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+    </symbol>
+    
+    <symbol id="msg" width="48" height="48" viewBox="0 0 48 48">
+        <defs>
+            <filter id="o3u3hdibfa">
+                <feColorMatrix in="SourceGraphic" values="0 0 0 0 0.066355 0 0 0 0 0.132985 0 0 0 0 0.199615 0 0 0 1.000000 0"/>
+            </filter>
+        </defs>
+        <g fill="current" fill-rule="evenodd" opacity=".85">
+            <g filter="url(#o3u3hdibfa)">
+                <path d="M0 0H48V48H0z"/>
+                <path fill="#000" fill-rule="nonzero" d="M44 13.96V32c0 2.2-1.8 4-4 4H12l-8 8V8c0-2.2 1.8-4 4-4h20.2c-.12.64-.2 1.32-.2 2 0 5.52 4.48 10 10 10 2.26 0 4.32-.78 6-2.04zM32 6c0 3.32 2.68 6 6 6s6-2.68 6-6-2.68-6-6-6-6 2.68-6 6z"/>
+            </g>
+        </g>
+    </symbol>
+
+    <symbol id="phone" width="24" height="24" viewBox="0 0 24 24">
+        <g fill="current" fill-rule="evenodd">
+            <g>
+                <path d="M0 0L24 0 24 24 0 24z"/>
+                <path fill="#123" fill-rule="nonzero" d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM19 12h2c0-4.97-4.03-9-9-9v2c3.87 0 7 3.13 7 7zm-4 0h2c0-2.76-2.24-5-5-5v2c1.66 0 3 1.34 3 3z"/>
+            </g>
+        </g>
+    </symbol>
+    
+    <symbol id="todo" viewBox="0 0 24 24">
+        <g fill="current" fill-rule="evenodd">
+            <path fill="#123" fill-rule="nonzero" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm5 16H7v-2h10v2zm-6.7-4L7 10.7l1.4-1.4 1.9 1.9 5.3-5.3L17 7.3 10.3 14z"/>
+        </g>
+    </symbol>
+
+    <symbol id="tool" viewBox="0 0 24 24">
+        <g fill="current" fill-rule="evenodd">
+            <path fill="#123" fill-rule="nonzero" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.9 13.49l-1.4 1.4c-.2.2-.51.2-.71 0l-3.41-3.41c-1.22.43-2.64.17-3.62-.81-1.11-1.11-1.3-2.79-.59-4.1l2.35 2.35 1.41-1.41-2.35-2.34c1.32-.71 2.99-.52 4.1.59.98.98 1.24 2.4.81 3.62l3.41 3.41c.19.19.19.51 0 .7z"/>
+        </g>
+    </symbol>
+</svg>

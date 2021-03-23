@@ -1,0 +1,245 @@
+/* extra light */
+@font-face {
+    font-family: 'IBMPlexSansKR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-ExtraLight.woff')
+        format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+/* light */
+@font-face {
+    font-family: 'IBMPlexSansKR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Light.woff')
+        format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* normal */
+@font-face {
+    font-family: 'IBMPlexSansKR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff')
+        format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* text */
+@font-face {
+    font-family: 'IBMPlexSansKR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Text.woff')
+        format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* medium */
+@font-face {
+    font-family: 'IBMPlexSansKR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Medium.woff')
+        format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* semi-bold */
+@font-face {
+    font-family: 'IBMPlexSansKR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-SemiBold.woff')
+        format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* bold */
+@font-face {
+    font-family: 'IBMPlexSansKR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Bold.woff')
+        format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        @apply font-display;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    h1 {
+        @apply font-display font-bold text-white text-xl;
+    }
+
+    h2 {
+        @apply font-display font-bold text-letter text-lg;
+    }
+
+    h3 {
+        @apply font-display font-medium text-letter text-lg text-opacity-30;
+    }
+
+    h4 {
+        @apply font-display font-bold text-letter text-base;
+    }
+
+    h5 {
+        @apply font-display font-bold text-letter text-sm text-opacity-60;
+    }
+
+    h6 {
+        @apply font-display font-bold text-alert text-xs;
+    }
+
+    input {
+        @apply font-display font-medium text-letter text-lg;
+    }
+
+    input::placeholder {
+        @apply font-display font-medium text-letter text-lg text-opacity-30;
+    }
+
+    input:focus {
+        @apply border-blue outline-none;
+    }
+
+    button:focus {
+        @apply outline-none;
+    }
+
+    button:active {
+        @apply outline-none;
+    }
+}
+
+@layer components {
+    .h1center {
+        @apply font-display font-bold text-white text-center text-xl;
+    }
+
+    .h2center {
+        @apply font-display font-bold text-letter text-center text-lg;
+    }
+
+    .h2centerblue {
+        @apply font-display font-bold text-blue text-center text-lg;
+    }
+
+    .h4center {
+        @apply font-display font-bold text-letter text-center text-base;
+    }
+
+    .h4blue {
+        @apply font-display font-bold text-blue text-base;
+    }
+
+    .h4white {
+        @apply font-display font-bold text-white text-base;
+    }
+
+    .h4centerblue {
+        @apply font-display font-bold text-blue text-center text-base;
+    }
+
+    .h4centerwhite {
+        @apply font-display font-bold text-white text-center text-base;
+    }
+
+    .h4centeralert {
+        @apply font-display font-bold text-alert text-center text-base;
+    }
+
+    .h4centerkakao {
+        @apply font-display font-bold text-kakao-black text-center text-base;
+    }
+
+    .p1 {
+        @apply font-display font-medium text-letter text-base;
+    }
+
+    .p1center {
+        @apply font-display font-medium text-letter text-center text-base;
+    }
+
+    .p1centerwhite {
+        @apply font-display font-medium text-white text-center text-base;
+    }
+
+    .p1centerop30 {
+        @apply font-display font-medium text-letter text-center text-base text-opacity-30;
+    }
+
+    .p2 {
+        @apply font-display font-medium text-letter text-sm text-opacity-60;
+    }
+
+    .p2center {
+        @apply font-display font-medium text-letter text-center text-sm;
+    }
+
+    .p2centerop60 {
+        @apply font-display font-medium text-letter text-center text-sm text-opacity-60;
+    }
+
+    .p3 {
+        @apply font-display font-medium text-letter text-xs;
+    }
+
+    .p3op60 {
+        @apply font-display font-medium text-letter text-xs text-opacity-60;
+    }
+
+    .p3center {
+        @apply font-display font-medium text-letter text-center text-xs;
+    }
+
+    .p3centerop60 {
+        @apply font-display font-medium text-letter text-center text-xs text-opacity-60;
+    }
+
+    .basic-grid {
+        @apply grid grid-cols-4 gap-m;
+    }
+}
+
+@layer utilities {
+    .event-sq {
+        width: calc(theme('spacing.5xl') - (2 * theme('spacing.lg')));
+        height: calc(theme('spacing.5xl') - (2 * theme('spacing.lg')));
+    }
+
+    .event-icon {
+        width: calc((theme('spacing.4xl') - (2 * theme('spacing.s'))) * 0.9);
+    }
+
+    @responsive {
+        @screen lg {
+            .desktop-padding {
+                padding-left: calc((100vw - 800px) / 2);
+                padding-right: calc((100vw - 800px) / 2);
+            }
+
+            .desktop-event-padding {
+                padding-left: calc((100vw - 400px) / 2);
+                padding-right: calc((100vw - 400px) / 2);
+            }
+
+            .desktop-margin {
+                margin-left: calc((100vw - 800px) / 2);
+                margin-right: calc((100vw - 800px) / 2);
+            }
+        }
+    }
+}
+
+.backdrop-filter-blur-10px {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
