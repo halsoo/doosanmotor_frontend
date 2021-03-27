@@ -23,7 +23,7 @@ class MainBanner extends Component {
                     <p className="h4white">{this.state.event_body}</p>
                 </div>
 
-                <Icons name="forward" svgClass="w-10% h-full fill-white"/>
+                <Icons name="forward" svgClass="w-auto h-1/3 fill-white"/>
             </div>
         )
     }

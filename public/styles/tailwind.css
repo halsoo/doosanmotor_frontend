@@ -701,6 +701,7 @@ h6 {
 }
 
 input {
+  border-radius: 0;
   font-family: IBMPlexSansKR, sans-serif;
   font-weight: 600;
   font-size: 24px;
@@ -12337,6 +12338,10 @@ button:active {
   z-index: auto;
 }
 
+.-z-10 {
+  z-index: -10;
+}
+
 .focus-within\:z-0:focus-within {
   z-index: 0;
 }
@@ -12365,6 +12370,10 @@ button:active {
   z-index: auto;
 }
 
+.focus-within\:-z-10:focus-within {
+  z-index: -10;
+}
+
 .focus\:z-0:focus {
   z-index: 0;
 }
@@ -12391,6 +12400,10 @@ button:active {
 
 .focus\:z-auto:focus {
   z-index: auto;
+}
+
+.focus\:-z-10:focus {
+  z-index: -10;
 }
 
 .gap-0 {
@@ -15104,6 +15117,30 @@ button:active {
   width: calc((72px - (2 * 12px)) * 0.9);
 }
 
+.h-nav {
+  height: 72px;
+}
+
+.h-block {
+  height: calc(72px + 1px);
+  min-height: calc(72px + 1px);
+}
+
+.h-menu {
+  height: calc(100vh - 72px);
+}
+
+.top-block {
+  top: calc(72px + 1px);
+}
+
+@media (min-width: 100px) and (max-width: 799px) {
+  .p-divider {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
 @media (min-width: 800px) {
   .desktop-padding {
     padding-left: calc((100vw - 800px) / 2);
@@ -15118,6 +15155,11 @@ button:active {
   .desktop-margin {
     margin-left: calc((100vw - 800px) / 2);
     margin-right: calc((100vw - 800px) / 2);
+  }
+
+  .p-divider-desktop {
+    padding-left: calc((100vw - 800px) / 2);
+    padding-right: calc((100vw - 800px) / 2);
   }
 }
 
@@ -26506,6 +26548,10 @@ button:active {
     z-index: auto;
   }
 
+  .sm\:-z-10 {
+    z-index: -10;
+  }
+
   .sm\:focus-within\:z-0:focus-within {
     z-index: 0;
   }
@@ -26534,6 +26580,10 @@ button:active {
     z-index: auto;
   }
 
+  .sm\:focus-within\:-z-10:focus-within {
+    z-index: -10;
+  }
+
   .sm\:focus\:z-0:focus {
     z-index: 0;
   }
@@ -26560,6 +26610,10 @@ button:active {
 
   .sm\:focus\:z-auto:focus {
     z-index: auto;
+  }
+
+  .sm\:focus\:-z-10:focus {
+    z-index: -10;
   }
 
   .sm\:gap-0 {
@@ -29198,6 +29252,13 @@ button:active {
             animation: bounce 1s infinite;
   }
 
+  @media (min-width: 100px) and (max-width: 799px) {
+    .sm\:p-divider {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+
   @media (min-width: 800px) {
     .sm\:desktop-padding {
       padding-left: calc((100vw - 800px) / 2);
@@ -29212,6 +29273,11 @@ button:active {
     .sm\:desktop-margin {
       margin-left: calc((100vw - 800px) / 2);
       margin-right: calc((100vw - 800px) / 2);
+    }
+
+    .sm\:p-divider-desktop {
+      padding-left: calc((100vw - 800px) / 2);
+      padding-right: calc((100vw - 800px) / 2);
     }
   }
 }
@@ -40596,6 +40662,10 @@ button:active {
     z-index: auto;
   }
 
+  .lg\:-z-10 {
+    z-index: -10;
+  }
+
   .lg\:focus-within\:z-0:focus-within {
     z-index: 0;
   }
@@ -40624,6 +40694,10 @@ button:active {
     z-index: auto;
   }
 
+  .lg\:focus-within\:-z-10:focus-within {
+    z-index: -10;
+  }
+
   .lg\:focus\:z-0:focus {
     z-index: 0;
   }
@@ -40650,6 +40724,10 @@ button:active {
 
   .lg\:focus\:z-auto:focus {
     z-index: auto;
+  }
+
+  .lg\:focus\:-z-10:focus {
+    z-index: -10;
   }
 
   .lg\:gap-0 {
@@ -43288,6 +43366,13 @@ button:active {
             animation: bounce 1s infinite;
   }
 
+  @media (min-width: 100px) and (max-width: 799px) {
+    .lg\:p-divider {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+
   @media (min-width: 800px) {
     .lg\:desktop-padding {
       padding-left: calc((100vw - 800px) / 2);
@@ -43302,6 +43387,11 @@ button:active {
     .lg\:desktop-margin {
       margin-left: calc((100vw - 800px) / 2);
       margin-right: calc((100vw - 800px) / 2);
+    }
+
+    .lg\:p-divider-desktop {
+      padding-left: calc((100vw - 800px) / 2);
+      padding-right: calc((100vw - 800px) / 2);
     }
   }
 }

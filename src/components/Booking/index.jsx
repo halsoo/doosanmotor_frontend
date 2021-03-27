@@ -39,15 +39,15 @@ function Booking (props) {
                         className="mt-2xl"
                         name={input.name} 
                         placeholder={input.placeholder} 
-                        text={input.value}
-                        handleInput={handleInput(index)}
+                        value={input.value}
+                        onChange={handleInput(index)}
                         key={input.name} />
                 )
             })}
 
-            <div className="w-full mt-bigGap flex flex-row justify-between items-center">
-                <Buttons className="w-24%" name="backward"/>
-                <Buttons className="w-3/4" name="confirm"/>
+            <div className="w-full mt-bigGap basic-grid items-center">
+                <Buttons className="col-span-1" name="backward"/>
+                <Buttons className="col-span-3" name="confirm"/>
             </div>
         </form>
     )

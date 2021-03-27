@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Button from './Button'
 
 import dayjs from 'dayjs' 
@@ -6,32 +6,38 @@ import 'dayjs/locale/ko'
 
 dayjs.locale('ko')
 
-function Time(props) {
+function Time({ date }) {
         
     const[times, setTimes] = useState([
-        {
+        {   
             period: "am",
-            time: "09:00 - 09:30"
-        },
-        {
-            period: "am",
-            time: "09:30 - 10:00"
+            time: "09:00 - 09:30",
+            dead: true,
         },
         {
             period: "am",
-            time: "10:00 - 10:30"
+            time: "09:30 - 10:00",
+            dead: false,
+        },
+        {
+            period: "am",
+            time: "10:00 - 10:30",
+            dead: false,
         },
         {
             period: "pm",
-            time: "01:00 - 01:30"
+            time: "01:00 - 01:30",
+            dead: false,
         },
         {
             period: "pm",
-            time: "01:30 - 02:00"
+            time: "01:30 - 02:00",
+            dead: true,
         },
         {
             period: "pm",
-            time: "02:00 - 02:30"
+            time: "02:00 - 02:30",
+            dead: false,
         },
     ])
     
@@ -39,6 +45,13 @@ function Time(props) {
         period: undefined,
         time: undefined,
     })
+
+    useEffect( () => {
+        setSelected({
+            period: undefined,
+            time: undefined,
+        })
+    }, [date])
     
 
     const handleButton = (period, time) => (e) => {
@@ -65,15 +78,13 @@ function Time(props) {
         <form className="mt-xl mb-4xl2 px-xl lg:desktop-padding">
             <div className="mb-xl w-full h-auto flex flex-col">
                 <h4>오전</h4>
-                <div className="mt-xs flex flex-row flex-wrap">
+                <div className="mt-xs basic-grid grid-flow-row">
                     {amTimes.map(time => {
-                        const deco = 
-                            selected.period === time.period && selected.time === time.time
-                            ? "h4centerblue border-blue border-2px"
-                            : "p1center"
+                        const deco = selected.period === time.period && selected.time === time.time 
                         return <Button 
-                            className={`w-49% mb-s ${deco}`}
-                            period={time.period}
+                            className={`col-span-2 ${deco}`}
+                            dead={time.dead}
+                            selected={deco}
                             time={time.time}
                             onClick={handleButton(time.period, time.time)}
                             key={`${time.period}-${time.time}`}
@@ -83,15 +94,13 @@ function Time(props) {
             </div>
             <div>
                 <h4>오후</h4>
-                <div className="mt-xs flex flex-row flex-wrap">
+                <div className="mt-xs basic-grid grid-flow-row">
                     {pmTimes.map(time => {
-                        const deco = 
-                            selected.period === time.period && selected.time === time.time 
-                            ? "h4centerblue border-blue border-2px"
-                            : "p1center"
+                        const deco = selected.period === time.period && selected.time === time.time 
                         return <Button 
-                            className={`w-49% ${deco}`}
-                            period={time.period}
+                            className={`col-span-2`}
+                            dead={time.dead}
+                            selected={deco}
                             time={time.time}
                             onClick={handleButton(time.period, time.time)}
                             key={`${time.period}-${time.time}`}

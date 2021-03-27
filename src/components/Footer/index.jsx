@@ -2,7 +2,7 @@ import Logos from "../Logos"
 
 function Footer (props) {
     return (
-        <div className="p3 flex flex-col text-opacity-60 px-xl lg:desktop-padding pt-2xl2 pb-3xl bg-dark-grey bg-clip-border">
+        <div className="p3 flex flex-col text-opacity-60 px-xl lg:desktop-padding pt-2xl2 pb-3xl bg-dark-grey bg-clip-border -z-10">
             
             <div className="mb-2xl2">
                 <p>© 2021 (주)성심 두산자동차검사소</p>
@@ -16,12 +16,12 @@ function Footer (props) {
                 <p>관련 기관</p>
 
                 <Logos
-                    svgClass="w-30%"
+                    svgClass="h-full"
                     name="daegu"
                 />
 
                 <Logos
-                    svgClass="w-1/5"
+                    svgClass="h-full"
                     name="suseong"
                 />
             </div>

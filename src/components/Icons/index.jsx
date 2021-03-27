@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { goIcon } from "../../../public/scripts/StyleChange.js"
+import { centerIcon } from "../../../public/scripts/StyleChange.js"
 const iconSet = "/icons/icons.svg"
 
 function Icons ({ name, svgClass}) {
@@ -7,7 +7,7 @@ function Icons ({ name, svgClass}) {
     const ref = useRef()
 
     useEffect(() => {
-        goIcon(ref)
+        centerIcon(ref.current)
     })
 
     return(

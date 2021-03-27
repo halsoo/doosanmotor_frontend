@@ -1,13 +1,12 @@
 const centerLogo = (element) => {
     const parent = element.parentNode
-    const childWH = element.getBoundingClientRect()
+    const parentWH = parent.getBoundingClientRect()
+    const childWH = element.getBBox()
 
-    parent.style.width = `${childWH.width}px`
-    parent.style.height = `${childWH.height}px`
-}
+    const ratio = parentWH.height / childWH.height
 
-const goLogo = (ref) => {
-    centerLogo(ref.current)
+    parent.style.width = `${childWH.width * ratio}px`
+    parent.style.height = `${childWH.height * ratio}px`
 }
 
 const centerIcon = (element) => {
@@ -21,8 +20,4 @@ const centerIcon = (element) => {
     parent.style.height = `${childWH.height * ratio}px`
 }
 
-const goIcon = (ref) => {
-    centerIcon(ref.current)
-}
-
-export { goLogo, goIcon }
+export { centerLogo, centerIcon }
