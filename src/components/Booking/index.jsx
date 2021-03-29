@@ -31,7 +31,7 @@ function Booking (props) {
     }
 
     return (
-        <form className="mt-xl w-full px-xl lg:desktop-padding " action="">
+        <form className="mt-xl w-full px-xl lg:desktop-padding" action="">
             <h2 className="">예약 정보를 입력해주세요.</h2>
             {inputs.map( (input, index) => {
                 return (

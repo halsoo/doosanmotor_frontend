@@ -1,6 +1,6 @@
 import Icons from '../Icons'
 
-function Kakao ({ className }) {
+function Kakao ({ className, visible }) {
 
     const handleButton = () => {
 
@@ -12,7 +12,9 @@ function Kakao ({ className }) {
             onClick={handleButton}>
             <Icons 
                 svgClass="h-50% mr-xs fill-letter"
-                name="kakao"/>
+                name="kakao"
+                visible={visible}
+            />
             <p className="h4centerkakao">카카오톡</p>
         </button>
     )

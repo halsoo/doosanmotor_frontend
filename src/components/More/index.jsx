@@ -1,6 +1,6 @@
 import Partition from '../Partition'
 
-function More (props) {
+function More ({ className }) {
 
     const items = [
         {
@@ -19,7 +19,7 @@ function More (props) {
 
     
     return(
-        <div className="mx-xl lg:desktop-margin flex flex-col">
+        <div className={`mx-xl lg:desktop-margin flex flex-col ${className}`}>
             <h2>더 알아보기</h2>
             {items.map( (item, index) => {
                 return (

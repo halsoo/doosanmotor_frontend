@@ -10,12 +10,12 @@ function ContentsBox({ contents, last, id }) {
             
             <h2 className="mb-m">{contents.title}</h2>
             
-            <h4 className="mb-2xl">{contents.subTitle}</h4>
+            <h4 className="mb-2xl">{contents.subtitle}</h4>
             
             <p className="p1 mb-2xl">{contents.contents}</p>
             
             <img 
-                className="w-full h-bigGap object-cover object-center overflow-hidden"
+                className="w-full h-6xl object-cover object-center overflow-hidden"
                 src={contents.imagePath} 
                 alt={`${contents.title}'s image`}
             />

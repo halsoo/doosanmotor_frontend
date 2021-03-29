@@ -1,8 +1,8 @@
 import Partition from '../Partition'
-import Address from './Address'
+import SmAddress from '../Address/SmAddress'
 import Buttons from '../Buttons'
 
-function Menu({ pathname }) {
+function Menu({ pathname, visible=false }) {
 
     const menuItems = [
         {
@@ -27,8 +27,10 @@ function Menu({ pathname }) {
         },
     ]
 
+    const show = visible ? "block" : "hidden"
+
     return (
-        <div className={`w-full h-menu pt-lg sm:px-xl lg:desktop-padding flex flex-col justify-between bg-white`}>
+        <div className={`w-full h-menu pt-lg sm:px-xl lg:desktop-padding flex flex-col justify-between bg-white ${show}`}>
             <div className="w-full flex flex-col">
                 {menuItems.map( (item, index) => {
                     return (
@@ -40,22 +42,25 @@ function Menu({ pathname }) {
                             last={null}
                             menu={true}
                             key={`${item.icon}-${item.text}-${index}`}
+                            visible={visible}
                         />
                     )
                 })}
             </div>
 
             <div className="w-full mb-xl2 flex flex-col">
-                <Address />
+                <SmAddress />
 
                 <div className="w-full mt-m basic-grid">
                     <Buttons 
                         className="col-start-1 col-end-3"
-                        name="phone" 
+                        name="phone"
+                        visible={visible}
                     />
                     <Buttons
                         className="col-start-3 col-end-5"
-                        name="kakao" 
+                        name="kakao"
+                        visible={visible}
                     />
                 </div>
             </div>

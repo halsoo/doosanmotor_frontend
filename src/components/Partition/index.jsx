@@ -1,6 +1,6 @@
 import Icons from '../Icons'
 
-function Partition ({ iconName, iconCurr, text, border, last, menu }) {
+function Partition ({ iconName, iconCurr, text, border, last, menu, visible=true }) {
 
     const borderCss = 
         last ?
@@ -18,13 +18,21 @@ function Partition ({ iconName, iconCurr, text, border, last, menu }) {
         :   "fill-letter"
 
     return(
-        <div className={`${menu ? null : "px-m"} w-full h-3xl3 flex flex-row justify-between items-center ${border ? borderCss : null}`}>
+        <div className={`${menu ? '' : "px-m"} h-3xl3 flex flex-row justify-between items-center ${border ? borderCss : ''}`}>
             <div className="h-full flex flex-row items-center">
-                <Icons name={iconName} svgClass={`w-auto h-36% ${menu ? "mr-m" : "mr-s"} ${iconFill}`} />
+                <Icons 
+                    name={iconName} 
+                    svgClass={`w-auto h-36% ${menu ? "mr-m" : "mr-s"} ${iconFill}`} 
+                    visible={visible}
+                />
                 {textTag}
             </div>
 
-            <Icons name="forward" svgClass="w-auto h-36% fill-letter" />
+            <Icons 
+                name="forward" 
+                svgClass="w-auto h-36% fill-letter" 
+                visible={visible}
+            />
         </div>
     )
 }

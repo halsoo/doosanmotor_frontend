@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { centerLogo } from "../../../public/scripts/StyleChange.js"
+import { centerLogo } from "../../scripts/StyleChange"
 const logoSet = "/logos/logos.svg"
 
 function Logos ({ name, svgClass}) {

@@ -1,6 +1,6 @@
 import Icons from '../Icons'
 
-function Confirm ({ className }) {
+function Confirm ({ className, visible }) {
 
     const handleButton = () => {
 
@@ -12,7 +12,9 @@ function Confirm ({ className }) {
             onClick={handleButton}>
             <Icons 
                 svgClass="h-36% mr-xs fill-white"
-                name="check"/>
+                name="check"
+                visible={visible}
+            />
             <p className="h4white">확인</p>
         </button>
     )

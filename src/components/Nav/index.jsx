@@ -7,7 +7,7 @@ import Logos from '../Logos'
 import Icons from '../Icons'
 
 
-function Nav( {transparent, divider}) {
+function Nav( {className, transparent = false, divider = true, refer = null}) {
     const router = useRouter()
 
     const [pop, setPop] = useState(false)
@@ -21,11 +21,12 @@ function Nav( {transparent, divider}) {
     }
 
     return(
-        <div className="w-screen fixed z-10">
+        <nav className={`w-screen fixed z-30 ${className}`} ref={refer}>
             <div className={`h-4xl flex justify-between items-center sm:px-xl lg:desktop-padding py-lg ${fill.bg}`}>
                 <Logos 
                     svgClass="w-auto h-full"
                     name={transparent ? "doosan_white" : "doosan"} 
+                    visible={refer.current}
                 />
                 <button
                     className="h-full"
@@ -34,18 +35,21 @@ function Nav( {transparent, divider}) {
                     <Icons 
                         svgClass={`w-auto h-full ${fill.icon}`}
                         name="menu"
+                        visible={refer.current}
                     />
                 </button>
             </div>
 
             {
                 divider && pop 
-                    ?   <Divider menu={true} />
-                    :   <Divider menu={false} />
+                    ?   <Divider menu={true} /> 
+                    :   divider && !pop
+                        ?   <Divider menu={false} />
+                        :   <Divider menu={false} />
             }
 
-            { pop ? <Menu pathname={router.pathname} /> : null }
-        </div>
+            <Menu pathname={router.pathname} visible={pop}/>
+        </nav>
     )
 }
 

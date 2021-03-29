@@ -1,6 +1,6 @@
 import Icons from '../Icons'
 
-function Phone ({ className }) {
+function Phone ({ className, visible }) {
 
     const handleButton = () => {
 
@@ -12,7 +12,9 @@ function Phone ({ className }) {
             onClick={handleButton}>
             <Icons 
                 svgClass="h-50% mr-xs fill-white"
-                name="phone"/>
+                name="phone"
+                visible={visible}
+            />
             <p className="h4centerwhite">전화하기</p>
         </button>
     )

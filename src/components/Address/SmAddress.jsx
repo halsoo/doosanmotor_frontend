@@ -1,5 +1,4 @@
-
-function Address(props) {
+function SmAddress(props) {
     return (
         <div className="w-full p-m rounded-12px bg-light-grey">
             <h4>대구 수성구 지범로 39 (두산동)</h4>
@@ -9,4 +8,4 @@ function Address(props) {
     )
 }
 
-export default Address
+export default SmAddress

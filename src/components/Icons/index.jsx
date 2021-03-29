@@ -1,14 +1,14 @@
 import { useEffect, useRef } from "react";
-import { centerIcon } from "../../../public/scripts/StyleChange.js"
+import { centerIcon } from "../../scripts/StyleChange"
 const iconSet = "/icons/icons.svg"
 
-function Icons ({ name, svgClass}) {
+function Icons ({ name, svgClass, visible=true}) {
 
     const ref = useRef()
 
     useEffect(() => {
         centerIcon(ref.current)
-    })
+    }, [visible])
 
     return(
         <svg className={svgClass}>

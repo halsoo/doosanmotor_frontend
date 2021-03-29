@@ -14,12 +14,12 @@ const components = {
     backward: Backward,
 }
 
-function Buttons ({ name, className }) {
+function Buttons ({ name, className, refer, visible=true }) {
 
     const RenderElem = components[name]
 
     return (
-        <RenderElem className={className} />
+        <RenderElem className={className} refer={refer} visible={visible} />
     )
 }
 

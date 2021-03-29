@@ -1,6 +1,6 @@
 import Icons from '../Icons'
 
-function Backward ({ className }) {
+function Backward ({ className, visible }) {
 
     const handleButton = () => {
 
@@ -12,7 +12,9 @@ function Backward ({ className }) {
             onClick={handleButton}>
             <Icons 
                 svgClass="h-36% mr-xs fill-letter"
-                name="backward"/>
+                name="backward"
+                visible={visible}
+            />
         </button>
     )
 }

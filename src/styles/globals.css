@@ -124,6 +124,11 @@
         @apply font-display font-bold text-white text-center text-xl;
     }
 
+    .h1centershadow {
+        text-shadow: 0 2px 8px rgba(17, 34, 51, 0.2);
+        @apply font-display font-bold text-white text-center text-xl;
+    }
+
     .h2center {
         @apply font-display font-bold text-letter text-center text-lg;
     }
@@ -232,8 +237,16 @@
         height: calc(100vh - theme('spacing.4xl'));
     }
 
-    .top-block {
-        top: calc(theme('spacing.4xl') + 1px);
+    .h-landing-img {
+        height: calc(100vh - theme('spacing.5xl'));
+    }
+
+    .button-transition {
+        @apply transition-landing-button duration-0.5s ease-in-out;
+    }
+
+    .nav-transition {
+        @apply transition-landing-nav duration-0.5s ease-in-out;
     }
 
     @responsive {
