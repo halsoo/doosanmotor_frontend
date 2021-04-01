@@ -1,4 +1,4 @@
-import Partition from '../Partition'
+import Partition from '../Shared/Partition'
 
 function More ({ className }) {
 
@@ -20,7 +20,7 @@ function More ({ className }) {
     
     return(
         <div className={`mx-xl lg:desktop-margin flex flex-col ${className}`}>
-            <h2>더 알아보기</h2>
+            <h2 className="mb-s">더 알아보기</h2>
             {items.map( (item, index) => {
                 return (
                     <Partition 

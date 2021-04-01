@@ -1,6 +1,6 @@
 function Divider({ menu }) {
 
-    const divider = <hr className="w-full border-t-1px border-divider"/>
+    const divider = <hr className={`w-full border-t-1px border-divider`}/>
 
     const render = menu
         ? (

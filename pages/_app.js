@@ -14,7 +14,6 @@ function MyApp({ Component, pageProps }) {
                 <meta name="description" content="Doosan Motor Car Inspection Service" />
                 <title>Doosan Motor</title>
             </Head>
-
             <Component {...pageProps} />
             <Footer/>
         </main>

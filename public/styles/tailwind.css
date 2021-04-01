@@ -4801,6 +4801,10 @@ button:active {
   height: 83.333333%;
 }
 
+.h-1\/8 {
+  height: 12.5%;
+}
+
 .h-1\/12 {
   height: 8.333333%;
 }
@@ -16454,12 +16458,24 @@ button:active {
   --tw-skew-y: -1deg;
 }
 
-.transition-landing-button {
+.transition-landing-button-position {
   transition-property: width, border-radius, bottom;
 }
 
-.transition-landing-nav {
+.transition-landing-nav-position {
   transition-property: opacity, top;
+}
+
+.transition-about-nav-background {
+  transition-property: background-color;
+}
+
+.transition-about-nav-fill {
+  transition-property: fill;
+}
+
+.transition-about-nav-divider {
+  transition-property: border-color;
 }
 
 .ease-in {
@@ -16484,6 +16500,14 @@ button:active {
 
 .duration-1s {
   transition-duration: 1s;
+}
+
+.duration-2s {
+  transition-duration: 2s;
+}
+
+.duration-3s {
+  transition-duration: 3s;
 }
 
 .delay-75 {
@@ -16635,16 +16659,38 @@ button:active {
   height: calc(100vh - 96px);
 }
 
-.button-transition {
+.button-landing-position-transition {
   transition-property: width, border-radius, bottom;
   transition-timing-function: ease-in-out;
   transition-duration: 0.5s;
 }
 
-.nav-transition {
+.nav-landing-position-transition {
   transition-property: opacity, top;
   transition-timing-function: ease-in-out;
   transition-duration: 0.5s;
+}
+
+.nav-about-background-transition {
+  transition-property: background-color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.5s;
+}
+
+.nav-about-fill-transition {
+  transition-property: fill;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.25s;
+}
+
+.nav-about-divider-trasition {
+  transition-property: border-color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.5s;
+}
+
+.top-menu {
+  top: calc(72px + 20px);
 }
 
 @media (min-width: 100px) and (max-width: 799px) {
@@ -16658,6 +16704,11 @@ button:active {
   .desktop-padding {
     padding-left: calc((100vw - 800px) / 2);
     padding-right: calc((100vw - 800px) / 2);
+  }
+
+  .inset-x-desktop {
+    right: calc((100vw - 800px) / 2);
+    left: calc((100vw - 800px) / 2);
   }
 
   .desktop-event-padding {
@@ -16679,6 +16730,10 @@ button:active {
 .backdrop-filter-blur-10px {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
+}
+
+.word-break-keepall {
+  word-break: keep-all;
 }
 
 @media (min-width: 100px) and (max-width: 799px) {
@@ -20525,6 +20580,10 @@ button:active {
 
   .sm\:h-5\/6 {
     height: 83.333333%;
+  }
+
+  .sm\:h-1\/8 {
+    height: 12.5%;
   }
 
   .sm\:h-1\/12 {
@@ -32167,12 +32226,24 @@ button:active {
     --tw-skew-y: -1deg;
   }
 
-  .sm\:transition-landing-button {
+  .sm\:transition-landing-button-position {
     transition-property: width, border-radius, bottom;
   }
 
-  .sm\:transition-landing-nav {
+  .sm\:transition-landing-nav-position {
     transition-property: opacity, top;
+  }
+
+  .sm\:transition-about-nav-background {
+    transition-property: background-color;
+  }
+
+  .sm\:transition-about-nav-fill {
+    transition-property: fill;
+  }
+
+  .sm\:transition-about-nav-divider {
+    transition-property: border-color;
   }
 
   .sm\:ease-in {
@@ -32197,6 +32268,14 @@ button:active {
 
   .sm\:duration-1s {
     transition-duration: 1s;
+  }
+
+  .sm\:duration-2s {
+    transition-duration: 2s;
+  }
+
+  .sm\:duration-3s {
+    transition-duration: 3s;
   }
 
   .sm\:delay-75 {
@@ -32267,6 +32346,11 @@ button:active {
     .sm\:desktop-padding {
       padding-left: calc((100vw - 800px) / 2);
       padding-right: calc((100vw - 800px) / 2);
+    }
+
+    .sm\:inset-x-desktop {
+      right: calc((100vw - 800px) / 2);
+      left: calc((100vw - 800px) / 2);
     }
 
     .sm\:desktop-event-padding {
@@ -36130,6 +36214,10 @@ button:active {
 
   .lg\:h-5\/6 {
     height: 83.333333%;
+  }
+
+  .lg\:h-1\/8 {
+    height: 12.5%;
   }
 
   .lg\:h-1\/12 {
@@ -47772,12 +47860,24 @@ button:active {
     --tw-skew-y: -1deg;
   }
 
-  .lg\:transition-landing-button {
+  .lg\:transition-landing-button-position {
     transition-property: width, border-radius, bottom;
   }
 
-  .lg\:transition-landing-nav {
+  .lg\:transition-landing-nav-position {
     transition-property: opacity, top;
+  }
+
+  .lg\:transition-about-nav-background {
+    transition-property: background-color;
+  }
+
+  .lg\:transition-about-nav-fill {
+    transition-property: fill;
+  }
+
+  .lg\:transition-about-nav-divider {
+    transition-property: border-color;
   }
 
   .lg\:ease-in {
@@ -47802,6 +47902,14 @@ button:active {
 
   .lg\:duration-1s {
     transition-duration: 1s;
+  }
+
+  .lg\:duration-2s {
+    transition-duration: 2s;
+  }
+
+  .lg\:duration-3s {
+    transition-duration: 3s;
   }
 
   .lg\:delay-75 {
@@ -47872,6 +47980,11 @@ button:active {
     .lg\:desktop-padding {
       padding-left: calc((100vw - 800px) / 2);
       padding-right: calc((100vw - 800px) / 2);
+    }
+
+    .lg\:inset-x-desktop {
+      right: calc((100vw - 800px) / 2);
+      left: calc((100vw - 800px) / 2);
     }
 
     .lg\:desktop-event-padding {

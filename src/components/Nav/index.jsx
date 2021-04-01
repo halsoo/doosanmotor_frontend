@@ -1,31 +1,70 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useRouter } from 'next/router'
 
-import Divider from '../Divider'
+import Divider from './Divider'
 import Menu from './Menu'
-import Logos from '../Logos'
-import Icons from '../Icons'
+import Logos from '../Shared/Logos'
+import Icons from '../Shared/Icons'
 
-
-function Nav( {className, transparent = false, divider = true, refer = null}) {
+function Nav({ className, posTransition, bgTransition, fillTransition , transparent = false, divider = true, refer = null }) {
     const router = useRouter()
 
     const [pop, setPop] = useState(false)
 
-    const fill = transparent ? {
-        bg: "bg-transparent",
-        icon: "fill-white",
-    } : {
-        bg: "bg-white",
-        icon: "fill-letter",
+    useEffect(() => {
+        const elem = refer.current
+
+        const eventTypes = ['scroll', 'touchmove', 'mousewheel', 'wheel', 'DOMMouseScroll']
+
+        eventTypes.forEach(type => {
+            elem.addEventListener(type, preventScroll, { capture: true, passive : false })
+        })
+
+        return () => {
+            eventTypes.forEach(type => {
+                elem.removeEventListener(type, preventScroll)
+            })
+        }
+    }, [])
+
+    function preventScroll(e) {
+        e.preventDefault()
+        e.stopPropagation()
     }
 
+    const fill = pop && transparent
+        ?   {
+                bg: "bg-white",
+                icon: "fill-letter",
+            }
+        :   transparent && !pop
+            ?   {
+                    bg: "bg-transparent",
+                    icon: "fill-white",
+                } 
+            :   {
+                    bg: "bg-white",
+                    icon: "fill-letter",
+                }
+
+    const transition = pop 
+        ?   {
+                pos: '',
+                bg: '',
+                fill: '',
+            }
+        :   {
+                pos: posTransition,
+                bg: bgTransition,
+                fill: fillTransition,
+            }
+
     return(
-        <nav className={`w-screen fixed z-30 ${className}`} ref={refer}>
-            <div className={`h-4xl flex justify-between items-center sm:px-xl lg:desktop-padding py-lg ${fill.bg}`}>
+        <nav className={`w-screen fixed z-30 ${className} ${transition.pos}`} ref={refer}>
+            <div className={`h-4xl sm:px-xl lg:desktop-padding py-lg flex justify-between items-center ${fill.bg} ${transition.bg}`}>
                 <Logos 
                     svgClass="w-auto h-full"
-                    name={transparent ? "doosan_white" : "doosan"} 
+                    name={transparent  && !pop ? "doosan_white" : "doosan"} 
                     visible={refer.current}
                 />
                 <button
@@ -33,7 +72,7 @@ function Nav( {className, transparent = false, divider = true, refer = null}) {
                     onClick={() => setPop(!pop)}
                 >
                     <Icons 
-                        svgClass={`w-auto h-full ${fill.icon}`}
+                        svgClass={`w-auto h-full ${fill.icon} ${transition.fill}`}
                         name="menu"
                         visible={refer.current}
                     />
@@ -45,7 +84,9 @@ function Nav( {className, transparent = false, divider = true, refer = null}) {
                     ?   <Divider menu={true} /> 
                     :   divider && !pop
                         ?   <Divider menu={false} />
-                        :   <Divider menu={false} />
+                        :   !divider
+                            ?   null
+                            :   <Divider menu={false} />
             }
 
             <Menu pathname={router.pathname} visible={pop}/>

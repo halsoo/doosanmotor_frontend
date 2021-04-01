@@ -1,4 +1,4 @@
-import Icons from '../Icons'
+import Icons from '../Shared/Icons'
 
 function Kakao ({ className, visible }) {
 

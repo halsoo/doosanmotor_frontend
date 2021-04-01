@@ -33,11 +33,15 @@ class Home extends Component {
     }
 
     triggerTransition = (e) => {
+        const body = document.body
         const button = this.state.buttonRef.current ? this.state.buttonRef.current : null
         const nav = this.state.navRef.current ? this.state.navRef.current : null
 
         const viewport = document.documentElement
         const offset = 5
+
+        const bodyBefore = ["mb-0"]
+        const bodyAfter = ["mb-3xl3"]
         
         const buttonBefore = ["w-87%", "bottom-5%", "rounded-12px"]
         const buttonAfter = ["w-full", "bottom-0", "rounded-0"]
@@ -49,6 +53,8 @@ class Home extends Component {
 
             if (viewport.scrollTop > offset) {
 
+                body.classList.remove(...bodyBefore)
+                body.classList.add(...bodyAfter)
                 button.classList.remove(...buttonBefore)
                 button.classList.add(...buttonAfter)
                 nav.classList.remove(...navBefore)
@@ -56,6 +62,8 @@ class Home extends Component {
                 return
             }
 
+            body.classList.remove(...bodyAfter)
+            body.classList.add(...bodyBefore)
             button.classList.remove(...buttonAfter)
             button.classList.add(...buttonBefore)
             nav.classList.remove(...navAfter)
@@ -73,9 +81,14 @@ class Home extends Component {
 
     render() {
         return (
-            <div className="w-full h-full">
-                <Nav className="opacity-0 -top-4xl nav-transition" refer={this.state.navRef}/>
+            <div className="w-full">
+                <Nav 
+                    posTransition="nav-landing-position-transition opacity-0 -top-4xl" 
+                    refer={this.state.navRef}
+                />
+
                 {this.state.eventInfo !== undefined ? <MainBanner event={this.state.eventInfo} /> : null }
+                
                 <ImageHeader
                     className={`w-full ${this.state.eventInfo === undefined ? "h-screen" : "h-landing-img"}`}
                     src={hero}
@@ -94,7 +107,7 @@ class Home extends Component {
                 <Buttons
                     refer={this.state.buttonRef}
                     name="book"
-                    className="w-87% mx-auto button-transition fixed bottom-5% inset-x-0 rounded-12px z-10"
+                    className="w-87% mx-auto button-landing-position-transition fixed bottom-5% inset-x-0 rounded-12px z-10"
                 />
             </div>
         )

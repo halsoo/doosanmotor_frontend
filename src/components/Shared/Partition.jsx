@@ -1,4 +1,4 @@
-import Icons from '../Icons'
+import Icons from './Icons'
 
 function Partition ({ iconName, iconCurr, text, border, last, menu, visible=true }) {
 
@@ -18,7 +18,7 @@ function Partition ({ iconName, iconCurr, text, border, last, menu, visible=true
         :   "fill-letter"
 
     return(
-        <div className={`${menu ? '' : "px-m"} h-3xl3 flex flex-row justify-between items-center ${border ? borderCss : ''}`}>
+        <div className={`${menu ? 'h-2xl2 mb-m' : "h-3xl3 px-m"} flex flex-row justify-between items-center ${border ? borderCss : ''}`}>
             <div className="h-full flex flex-row items-center">
                 <Icons 
                     name={iconName} 

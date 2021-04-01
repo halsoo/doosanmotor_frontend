@@ -155,6 +155,7 @@ module.exports = {
           '3/6': '50%',
           '4/6': '66.666667%',
           '5/6': '83.333333%',
+          '1/8': '12.5%',
           '1/12': '8.333333%',
           '2/12': '16.666667%',
           '3/12': '25%',
@@ -667,8 +668,11 @@ module.exports = {
           '14': '14',
       },
       transitionProperty: {
-          'landing-button': 'width, border-radius, bottom',
-          'landing-nav': 'opacity, top'
+          'landing-button-position': 'width, border-radius, bottom',
+          'landing-nav-position': 'opacity, top',
+          'about-nav-background': 'background-color',
+          'about-nav-fill': 'fill',
+          'about-nav-divider': 'border-color',
       },
       transitionTimingFunction: {
           'in': 'ease-in',
@@ -679,6 +683,8 @@ module.exports = {
           '0.25s': '0.25s',
           '0.5s': '0.5s',
           '1s': '1s',
+          '2s': '2s',
+          '3s': '3s',
       },
   },
   variants: {

@@ -35,11 +35,11 @@ const links = [
         code: "google",
         name: "구글 지도",
         paths: {
-            web: "https://www.google.com/maps/search/?api=1&query=(주)성심+두산자동차검사소",
+            web: "https://www.google.com/maps/search/?api=1&query=(주)성심+두산+자동차검사소",
             mobile: {
                 common: undefined,
-                ios: "comgooglemaps://?q=(주)성심+두산자동차검사소",
-                android: "geo:0,0?q=(주)성심+두산자동차검사소",
+                ios: "comgooglemaps://?q=(주)성심+두산+자동차검사소",
+                android: "geo:0,0?q=(주)성심+두산+자동차검사소",
             }
         }
     },

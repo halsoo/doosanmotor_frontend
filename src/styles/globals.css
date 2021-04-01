@@ -241,12 +241,28 @@
         height: calc(100vh - theme('spacing.5xl'));
     }
 
-    .button-transition {
-        @apply transition-landing-button duration-0.5s ease-in-out;
+    .button-landing-position-transition {
+        @apply transition-landing-button-position duration-0.5s ease-in-out;
     }
 
-    .nav-transition {
-        @apply transition-landing-nav duration-0.5s ease-in-out;
+    .nav-landing-position-transition {
+        @apply transition-landing-nav-position duration-0.5s ease-in-out;
+    }
+
+    .nav-about-background-transition {
+        @apply transition-about-nav-background duration-0.5s ease-in-out;
+    }
+
+    .nav-about-fill-transition {
+        @apply transition-about-nav-fill duration-0.25s ease-in-out;
+    }
+
+    .nav-about-divider-trasition {
+        @apply transition-about-nav-divider duration-0.5s ease-in-out;
+    }
+
+    .top-menu {
+        top: calc(theme('spacing.4xl') + theme('spacing.lg'));
     }
 
     @responsive {
@@ -261,6 +277,11 @@
             .desktop-padding {
                 padding-left: calc((100vw - 800px) / 2);
                 padding-right: calc((100vw - 800px) / 2);
+            }
+
+            .inset-x-desktop {
+                right: calc((100vw - 800px) / 2);
+                left: calc((100vw - 800px) / 2);
             }
 
             .desktop-event-padding {
@@ -284,4 +305,8 @@
 .backdrop-filter-blur-10px {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
+}
+
+.word-break-keepall {
+    word-break: keep-all;
 }

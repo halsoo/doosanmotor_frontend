@@ -1,4 +1,4 @@
-import Partition from '../Partition'
+import Partition from '../Shared/Partition'
 import SmAddress from '../Address/SmAddress'
 import Buttons from '../Buttons'
 
@@ -30,8 +30,8 @@ function Menu({ pathname, visible=false }) {
     const show = visible ? "block" : "hidden"
 
     return (
-        <div className={`w-full h-menu pt-lg sm:px-xl lg:desktop-padding flex flex-col justify-between bg-white ${show}`}>
-            <div className="w-full flex flex-col">
+        <div className={`w-full h-menu bg-white ${show}`}>
+            <div className="w-auto flex flex-col fixed top-menu sm:inset-x-xl lg:inset-x-desktop">
                 {menuItems.map( (item, index) => {
                     return (
                         <Partition 
@@ -48,7 +48,7 @@ function Menu({ pathname, visible=false }) {
                 })}
             </div>
 
-            <div className="w-full mb-xl2 flex flex-col">
+            <div className="w-auto flex flex-col fixed bottom-xl2 sm:inset-x-xl lg:inset-x-desktop">
                 <SmAddress />
 
                 <div className="w-full mt-m basic-grid">
