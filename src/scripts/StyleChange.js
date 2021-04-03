@@ -5,8 +5,13 @@ const centerLogo = (element) => {
 
     const ratio = parentWH.height / childWH.height
 
-    parent.style.width = `${childWH.width * ratio}px`
-    parent.style.height = `${childWH.height * ratio}px`
+    const result = {
+        width: childWH.width * ratio,
+        height: childWH.height * ratio
+    }
+
+    parent.style.width = `${result.width}px`
+    parent.style.height = `${result.height}px`
 }
 
 const centerIcon = (element) => {
@@ -16,8 +21,13 @@ const centerIcon = (element) => {
 
     const ratio = parentWH.height / childWH.height
 
-    parent.style.width = `${childWH.height * ratio}px`
-    parent.style.height = `${childWH.height * ratio}px`
+    const result = {
+        width: childWH.width * ratio,
+        height: childWH.height * ratio
+    }
+
+    parent.style.width = `${result.height}px`
+    parent.style.height = `${result.height}px`
 }
 
 export { centerLogo, centerIcon }

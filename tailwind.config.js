@@ -49,6 +49,7 @@ module.exports = {
           '5xl': '96px',
           '6xl': '200px',
           'bigGap': '206px',
+          'event-header': '240px',
       },
       backgroundColor: (theme) => theme('colors'),
       backgroundPosition: {
@@ -75,6 +76,7 @@ module.exports = {
           none: '0',
           '8px': '8px',
           '12px': '12px',
+          '16px': '16px',
           half: "50%",
       },
       borderWidth: (theme) => ({
@@ -388,6 +390,7 @@ module.exports = {
           '50': '0.5',
           '60': '0.6',
           '75': '0.75',
+          '90': '0.9',
           '100': '1',
       },
       order: {

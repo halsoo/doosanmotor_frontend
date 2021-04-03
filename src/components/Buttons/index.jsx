@@ -3,6 +3,7 @@ import Cancel from './Cancel'
 import Book from './Book'
 import Phone from './Phone'
 import Kakao from './Kakao'
+import KakaoChannel from './KakaoChannel'
 import Backward from './Backward'
 
 const components = {
@@ -11,6 +12,7 @@ const components = {
     book: Book,
     phone: Phone,
     kakao: Kakao,
+    kakaoChannel: KakaoChannel,
     backward: Backward,
 }
 

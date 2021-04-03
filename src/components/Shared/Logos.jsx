@@ -12,7 +12,10 @@ function Logos ({ name, svgClass}) {
 
     return (
         <svg className={svgClass}>
-            <use ref={ref} href={`${logoSet}#${name}`}/>
+            <use
+                ref={ref} 
+                href={`${logoSet}#${name}`}
+            />
         </svg>
     )
 }

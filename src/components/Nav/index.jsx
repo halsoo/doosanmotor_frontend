@@ -10,9 +10,11 @@ function Nav({ className, posTransition, bgTransition, fillTransition , transpar
     const router = useRouter()
 
     const [pop, setPop] = useState(false)
+    const dividerRef = useRef()
+    const navRef = refer !== null ? refer : useRef()
 
     useEffect(() => {
-        const elem = refer.current
+        const elem = navRef.current
 
         const eventTypes = ['scroll', 'touchmove', 'mousewheel', 'wheel', 'DOMMouseScroll']
 
@@ -26,6 +28,22 @@ function Nav({ className, posTransition, bgTransition, fillTransition , transpar
             })
         }
     }, [])
+
+    useEffect(() => {
+        const dividerElem = dividerRef.current
+
+        if(dividerElem !== null && dividerElem !== undefined) {
+            if (transparent) {
+                dividerElem.classList.remove('border-divider')
+                dividerElem.classList.add('border-transparent')
+                return
+            }
+
+            dividerElem.classList.remove('border-transparent')
+            dividerElem.classList.add('border-divider')
+        }
+
+    }, [transparent, pop])
 
     function preventScroll(e) {
         e.preventDefault()
@@ -60,12 +78,11 @@ function Nav({ className, posTransition, bgTransition, fillTransition , transpar
             }
 
     return(
-        <nav className={`w-screen fixed z-30 ${className} ${transition.pos}`} ref={refer}>
+        <nav className={`w-screen fixed z-30 ${className} ${transition.pos}`} ref={navRef}>
             <div className={`h-4xl sm:px-xl lg:desktop-padding py-lg flex justify-between items-center ${fill.bg} ${transition.bg}`}>
                 <Logos 
                     svgClass="w-auto h-full"
                     name={transparent  && !pop ? "doosan_white" : "doosan"} 
-                    visible={refer.current}
                 />
                 <button
                     className="h-full"
@@ -74,19 +91,19 @@ function Nav({ className, posTransition, bgTransition, fillTransition , transpar
                     <Icons 
                         svgClass={`w-auto h-full ${fill.icon} ${transition.fill}`}
                         name="menu"
-                        visible={refer.current}
+                        visible={true}
                     />
                 </button>
             </div>
 
             {
-                divider && pop 
-                    ?   <Divider menu={true} /> 
+                pop 
+                    ?   <Divider menu={true}/> 
                     :   divider && !pop
-                        ?   <Divider menu={false} />
+                        ?   <Divider menu={false} refer={dividerRef}/>
                         :   !divider
                             ?   null
-                            :   <Divider menu={false} />
+                            :   <Divider menu={false} refer={dividerRef}/>
             }
 
             <Menu pathname={router.pathname} visible={pop}/>

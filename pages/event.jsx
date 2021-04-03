@@ -1,12 +1,9 @@
-import { Component, createRef } from 'react'
-import { throttle } from 'throttle-debounce'
+import { Component } from 'react'
 
 import Nav from '../src/components/Nav'
-import ImageHeader from '../src/components/ImageHeader'
+import Block from '../src/components/Shared/Block'
+import EventHeader from '../src/components/Event/EventHeader'
 import ContentsBox from '../src/components/Shared/ContentsBox'
-import MainBanner from '../src/components/Event/MainBanner'
-
-import hero from '../public/img/hero.jpg'
 
 class About extends Component {
     constructor(props) {
@@ -31,9 +28,6 @@ class About extends Component {
                     imagePath: null
                 },
             ],
-            buttonRef: createRef(),
-            navRef: createRef(),
-            navTransparent: true,
         }
 
         this.loadEvent()
@@ -50,45 +44,14 @@ class About extends Component {
         // setState(contents)
     }
 
-    triggerTransition = (e) => {
-        const viewport = document.documentElement
-        const offset = 5
-
-        if (viewport.scrollTop > offset) {
-            this.setState({
-                ...this.state,
-                navTransparent: false,
-            })
-            return
-        }
-
-        this.setState({
-            ...this.state,
-            navTransparent: true,
-        })
-    }
-
-    componentDidMount() {
-        window.addEventListener('scroll', throttle(50, this.triggerTransition))
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('scroll', throttle(50, this.triggerTransition))
-    }
-
     render() {
         return (
             <div className="w-full">
-                <Nav 
-                    bgTransition="nav-about-background-transition"
-                    fillTransition="nav-about-fill-transition"
-                    transparent={this.state.navTransparent}
-                    refer={this.state.navRef}
-                />
+                <Nav/>
 
-                <ImageHeader
-                    className={`w-full ${this.state.eventInfo === undefined ? "h-screen" : "h-landing-img"}`}
-                    src={hero}
+                <Block />
+                <EventHeader
+                    title={this.state.eventInfo.title}
                 />
 
                 <div className="sm:mx-xl lg:desktop-margin mt-2xl2 mb-3xl">
@@ -105,8 +68,6 @@ class About extends Component {
                     })
                 }
                 </div>
-                
-                {this.state.eventInfo !== undefined ? <MainBanner event={this.state.eventInfo} /> : null }
 
             </div>
         )

@@ -1,6 +1,10 @@
-function Divider({ menu }) {
+function Divider({ menu, refer }) {
 
-    const divider = <hr className={`w-full border-t-1px border-divider`}/>
+    const divider = 
+        <hr 
+            className={`w-full border-t-1px border-divider transition-about-nav-divider`}
+            ref={refer}
+        />
 
     const render = menu
         ? (

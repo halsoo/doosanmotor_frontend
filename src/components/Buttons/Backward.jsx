@@ -12,7 +12,7 @@ function Backward ({ className, visible }) {
             onClick={handleButton}>
             <Icons 
                 svgClass="h-36% mr-xs fill-letter"
-                name="backward"
+                name="back_arrow"
                 visible={visible}
             />
         </button>
