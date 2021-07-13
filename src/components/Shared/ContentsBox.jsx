@@ -26,7 +26,7 @@ function ContentsBox({ contents, last, id }) {
                 
                 {contents.imagePath
                     ?   <img 
-                            className="w-full h-6xl object-cover object-center overflow-hidden"
+                            className="w-full h-7xl object-cover object-center overflow-hidden"
                             src={contents.imagePath} 
                             alt={`${contents.title}'s image`}
                         />

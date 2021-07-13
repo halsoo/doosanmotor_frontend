@@ -2,8 +2,6 @@ import Logos from '../src/components/Shared/Logos'
 import Buttons from '../src/components/Buttons'
 
 function Parking(props) {
-
-    
     return (
         <div className="w-full h-screen sm:px-xl lg:desktop-padding">
             <div className="w-full h-event-header mt-xl flex justify-center items-center bg-dark-grey bg-opacity-90 rounded-16px">

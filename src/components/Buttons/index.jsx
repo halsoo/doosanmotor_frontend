@@ -16,13 +16,19 @@ const components = {
     backward: Backward,
 }
 
-function Buttons ({ name, className, refer, visible=true }) {
+function Buttons ({ className, name, text=null, disabled=false, disabledText=null, onClick=null, refer=null, visible=true }) {
 
     const RenderElem = components[name]
 
-    return (
-        <RenderElem className={className} refer={refer} visible={visible} />
-    )
+    return <RenderElem 
+        className={className} 
+        text={text}
+        disabled={disabled}
+        disabledText={disabledText}
+        onClick={onClick} 
+        refer={refer} 
+        visible={visible} 
+    />
 }
 
 export default Buttons

@@ -1,0 +1,9 @@
+{
+    "editor.wordWrap": "bounded",
+    "editor.wordWrapColumn": 150,
+    "workbench.editor.labelFormat": "short",
+    "workbench.colorTheme": "Nicer High Contrast",
+    "workbench.iconTheme": "high-contrast-icons-dark",
+    "workbench.tree.indent": 10,
+    "editor.renderWhitespace": "none",
+}

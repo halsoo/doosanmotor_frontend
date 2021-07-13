@@ -107,7 +107,7 @@
     }
 
     input:focus {
-        @apply border-blue outline-none;
+        @apply outline-none;
     }
 
     button:focus {

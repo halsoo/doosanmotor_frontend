@@ -1,21 +1,22 @@
 import Icons from '../Shared/Icons'
 
-function Confirm ({ className, visible }) {
+function Confirm ({ className, text, disabled, disabledText, onClick }) {
 
-    const handleButton = () => {
-
-    }
+    const buttonStyle = disabled ? 'bg-alert bg-opacity-50' : 'bg-blue'
+    const buttonText = disabled ? disabledText : text
 
     return (
         <button 
-            className={`h-3xl3 flex flex-row justify-center items-center bg-blue rounded-12px ${className}`} 
-            onClick={handleButton}>
+            className={`${className} flex flex-row justify-center items-center ${buttonStyle} rounded-12px`}
+            disabled={disabled}
+            onClick={onClick}
+        >
             <Icons 
-                svgClass="h-36% mr-xs fill-white"
+                svgClass={`h-36% mr-xs fill-white ${disabled ? 'hidden' : ''}`}
                 name="check"
-                visible={visible}
+                visible={!disabled}
             />
-            <p className="h4white">확인</p>
+            <p className="h4white">{buttonText}</p>
         </button>
     )
 }

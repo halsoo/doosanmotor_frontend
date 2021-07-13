@@ -1,4 +1,4 @@
-function Button ({ className, dead, selected, time, onClick}) {
+function Time ({ className, dead, selected, time, onClick}) {
     const deco = 
         dead ?
             "p1centerop30 bg-dark-grey" :
@@ -15,4 +15,4 @@ function Button ({ className, dead, selected, time, onClick}) {
     )
 }
 
-export default Button
+export default Time

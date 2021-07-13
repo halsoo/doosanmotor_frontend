@@ -1,26 +1,20 @@
-import { useState } from 'react'
-import dayjs from 'dayjs'
-import 'dayjs/locale/ko'
+import { useState, useEffect } from 'react'
 
 import Month from './Month'
 import Day from './Day'
+import TimeList from './TimeList'
 
-import { dateToWeekday } from './Conversions'
-
-dayjs.locale('ko')
-
-// date debugging
-// import customParseFormat from 'dayjs/plugin/customParseFormat'
-// dayjs.extend(customParseFormat)
-
-function Calendar ({ className }) {
-    //const date = dayjs("2020-12-01", "YYYY-MM-DD")
-    const [selected, setSelected] = useState({
+function Calendar ({ className, dates, values, onChange }) {
+    const [selected, setSelected] = useState(values ? values : {
+        calendarIndex: undefined,
         month: undefined,
+        dateIndex: undefined,
         date: undefined,
+        period: undefined,
+        time: undefined,
     })
 
-    const handleButton = (month, date) => e => {   
+    const onDateSelect = (calendarIndex, month, dateIndex, date) => (e) => {
         e.preventDefault()
 
         const target = e.currentTarget.lastChild
@@ -29,93 +23,74 @@ function Calendar ({ className }) {
         target.style.height = `${targetHeight}px`
         target.style.width = `${targetHeight}px`
 
-        setSelected({
+        setSelected({ 
+            calendarIndex, 
             month,
-            date
+            dateIndex,
+            date,
+            period: undefined,
+            time: undefined
         })
     }
 
-    const date = dayjs()
-    const dateList = listMaker(date)
+    const onTimeSelect = ({ period, time}) => {
+        setSelected({
+            ...selected,
+            period,
+            time
+        })
+    }
+
+    useEffect(() => onChange(selected), [selected])
 
     return (
-        <div className={`w-full h-4xl2 px-xl lg:desktop-padding flex items-center bg-light-grey ${className}`}>
-            <div className="w-full h-full flex flex-row justify-start items-center overflow-x-auto overscroll-x-auto">
-                {dateList.map((elem) => {
-                    let result = []
+        <div>
+            <div className="w-full h-4xl2 px-xl lg:desktop-padding flex items-center bg-light-grey">
+                <div className="w-full h-full flex flex-row justify-start items-center overflow-x-auto overscroll-x-auto">
+                    {dates.map((elem, calIdx) => {
+                        let result = []
 
-                    const MonthComp = 
-                        <Month 
-                            className="min-w-10% mr-xs"
-                            month={elem.month} 
-                            key={`${elem.month}월`}/>
+                        const MonthComp = 
+                            <Month 
+                                className="min-w-10% mr-xs"
+                                month={elem.month} 
+                                key={`${elem.month}월`}/>
 
-                    const DaysComp = []
-                    elem.days.forEach((day, idx) => {
-                        const deco = 
-                            selected.month === elem.month && selected.date === day[0]
-                            ? "h4centerwhite bg-blue rounded-half text-white"
-                            : "p1center bg-transparent rounded-none text-letter"
-                        DaysComp.push(
-                            <Day 
-                                buttonClass="min-w-10% mr-xs"
-                                dayClass={deco}
-                                dayOfMonth={day[0]} 
-                                dayOfWeek={day[1]}
-                                onClick={handleButton(elem.month, day[0])}
-                                key={`${elem.month}월-${day}일`}/>)
-                    })
+                        const DaysComp = []
+                        elem.dates.forEach((date, dIdx) => {
+                            const deco = 
+                                selected.month === elem.month && selected.date === date[0]
+                                ? "h4centerwhite bg-blue rounded-half text-white"
+                                : "p1center bg-transparent rounded-none text-letter"
+                            DaysComp.push(
+                                <Day 
+                                    buttonClass="min-w-10% mr-xs"
+                                    dayClass={deco}
+                                    dayOfMonth={date[0]} 
+                                    dayOfWeek={date[1]}
+                                    onClick={onDateSelect(calIdx, elem.month, dIdx, date[0])}
+                                    key={`${elem.month}월-${date[0]}일`}/>)
+                        })
 
-                    result.push(MonthComp)
-                    result = result.concat(DaysComp)
+                        result.push(MonthComp)
+                        result = result.concat(DaysComp)
 
-                    return result
-                })}
+                        return result
+                    })}
+                </div>
             </div>
+
+            <TimeList
+                times={selected.date ? dates[selected.calendarIndex].dates[selected.dateIndex][2] : undefined}
+                onChange={onTimeSelect}
+                prevValues={ selected.period && selected.time ? {
+                    period: selected.period,
+                    time: selected.time
+                } : undefined}
+            />
+
         </div>
     )
-}
-
-const listMaker = (dayObj) => {
-    const thisMonthObj = dayObj
-    const nextMonthObj = dayObj.month(thisMonthObj.month() + 1) // .month() => 0~11
-
-    //all number
-    const thisMonthCurrent = thisMonthObj.date()
-    const thisMonthEnd = thisMonthObj.endOf('month').date()
-
-    const nextMonthStart = nextMonthObj.startOf('month').date()
-    const nextMonthEnd = nextMonthObj.endOf('month').date()
-
-    let list = [
-        [thisMonthObj, thisMonthCurrent, thisMonthEnd],
-        [nextMonthObj, nextMonthStart, nextMonthEnd],
-    ]
-
-    let result = []
-
-    list.forEach( (elem) => {
-        const obj = elem[0] // for year calculation
-        const dateRange = elem.slice(1, 3)
-        const month = obj.month() + 1 // .month() => 0~11
-
-        let subList = {}
-        subList["month"] = month
-        subList["days"] = []
-
-        for (let d = dateRange[0]; d < dateRange[1] + 1; d ++) {
-            let dayNWeekday = []
-
-            const weekday = dateToWeekday(obj, d)
-            
-            dayNWeekday.push(d, weekday)
-            subList["days"].push(dayNWeekday)
-        }
-
-        result.push(subList)
-    })
-
-    return result
 }
 
 export default Calendar

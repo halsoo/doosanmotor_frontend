@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
+import { whatOS } from '../../scripts/UserAgent'
 
 import Buttons from '../Buttons'
-import whatOS from '../../scripts/UserAgent'
 
 import hero from '../../../public/img/hero.jpg'
 import mapUrls from './MapLinks'
@@ -77,7 +77,7 @@ function LgAddress({ className }) {
             {/* Address */}
             <article className="w-full h-auto pb-xl rounded-12px bg-light-grey">
                 <img
-                    className="w-full h-6xl mb-2xl object-cover object-center overflow-hidden rounded-t-12px" 
+                    className="w-full h-7xl mb-2xl object-cover object-center overflow-hidden rounded-t-12px" 
                     src={hero} 
                     alt="picture of Doosan Motors"
                 />
