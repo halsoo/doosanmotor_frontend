@@ -1,6 +1,7 @@
 import Confirm from './Confirm'
 import Cancel from './Cancel'
 import Book from './Book'
+import Edit from './Edit'
 import Phone from './Phone'
 import Kakao from './Kakao'
 import KakaoChannel from './KakaoChannel'
@@ -10,6 +11,7 @@ const components = {
     confirm: Confirm,
     cancel: Cancel,
     book: Book,
+    edit: Edit,
     phone: Phone,
     kakao: Kakao,
     kakaoChannel: KakaoChannel,

@@ -48,6 +48,7 @@ module.exports = {
           '4xl2': '88px',
           '5xl': '96px',
           '5xl2': '120px',
+          '5xl3': '128px',
           '6xl': '154px',
           '7xl': '200px',
           'bigGap': '206px',

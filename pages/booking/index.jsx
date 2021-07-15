@@ -5,11 +5,11 @@ import dayjs from 'dayjs'
 import 'dayjs/locale/ko'
 dayjs.locale('ko')
 
-import { dateToWeekday } from '../src/scripts/Conversions'
+import { dateToWeekday } from '../../src/scripts/Conversions'
 
-import Nav from '../src/components/Nav'
-import Block from '../src/components/Shared/Block'
-import BookingSteps from '../src/components/BookingSteps'
+import Nav from '../../src/components/Nav'
+import Block from '../../src/components/Shared/Block'
+import BookingSteps from '../../src/components/BookingSteps'
 
 function Booking(props) {
     const [state, setState] = useState({

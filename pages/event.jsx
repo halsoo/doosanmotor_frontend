@@ -5,7 +5,7 @@ import Block from '../src/components/Shared/Block'
 import EventHeader from '../src/components/Event/EventHeader'
 import ContentsBox from '../src/components/Shared/ContentsBox'
 
-class About extends Component {
+class Event extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -74,4 +74,4 @@ class About extends Component {
     }
 }
 
-export default About
+export default Event

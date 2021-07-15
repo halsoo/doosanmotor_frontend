@@ -278,6 +278,10 @@
         height: 88px;
     }
 
+    .mypage-emoji {
+        font-size: theme('spacing.3xl')
+    }
+
     @responsive {
         @screen sm {
             .p-divider {
