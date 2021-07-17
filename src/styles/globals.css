@@ -61,6 +61,8 @@
     font-style: normal;
 }
 
+@import 'antd/dist/antd.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -212,6 +214,55 @@
     .basic-grid {
         @apply grid grid-cols-4 gap-m;
     }
+
+    .admin-grid {
+        width: 1376px;
+        @apply grid grid-cols-12 gap-2xl;
+    }
+
+    .timeBlock-grid {
+        @apply grid grid-cols-3 gap-xl;
+    }
+
+    .h1admin {
+        @apply font-display font-medium text-admin-letter text-2xl;
+    }
+
+    .h1admingrey {
+        @apply font-display font-medium text-admin-grey text-2xl;
+    }
+
+    .h2admin {
+        @apply font-display font-bold text-admin-letter text-xl;
+    }
+
+    .h3admin {
+        @apply font-display font-normal text-admin-letter text-xl;
+    }
+
+    .h4admin {
+        @apply font-display font-bold text-admin-letter text-lg;
+    }
+
+    .h4admingrey {
+        @apply font-display font-bold text-admin-grey text-lg;
+    }
+
+    .p1admin {
+        @apply font-display font-normal text-admin-letter text-base2;
+    }
+
+    .p1admingrey {
+        @apply font-display font-normal text-admin-grey text-base2;
+    }
+
+    .p2admin {
+        @apply font-display font-normal text-admin-letter text-base;
+    }
+
+    .p2adminalert {
+        @apply font-display font-normal text-alert text-base;
+    }
 }
 
 @layer utilities {
@@ -243,6 +294,10 @@
 
     .h-landing-img {
         height: calc(100vh - theme('spacing.5xl'));
+    }
+
+    .h-admin-calendar {
+        height: 310px
     }
 
     .button-landing-position-transition {

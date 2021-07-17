@@ -31,4 +31,4 @@ const digitConv = (num) => {
     return num < 10 ? `0${num}` : num
 }
 
-export {numToWeekday, dateToWeekday}
+export {weekdays, numToWeekday, dateToWeekday}

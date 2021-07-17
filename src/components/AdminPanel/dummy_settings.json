@@ -1,0 +1,28 @@
+{
+    "data": [
+        {
+            "name": "reservationInterval",
+            "value": 1800
+        },
+        {
+            "name": "maxBooking",
+            "value": 6
+        },
+        {
+            "name": "openingHours",
+            "value": {
+                "start": 32400,
+                "end": 64800
+            }
+        },
+        {
+            "name": "unavailableHours",
+            "value": [
+                {
+                    "start": 43200,
+                    "end": 46800
+                }
+            ]
+        }
+    ]
+}

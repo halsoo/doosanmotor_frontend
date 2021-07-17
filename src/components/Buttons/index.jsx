@@ -1,6 +1,8 @@
+import Book from './Book'
+import BlockBooking from './BlockBooking'
 import Confirm from './Confirm'
 import Cancel from './Cancel'
-import Book from './Book'
+import CheckBox from './CheckBox'
 import Edit from './Edit'
 import Phone from './Phone'
 import Kakao from './Kakao'
@@ -8,9 +10,11 @@ import KakaoChannel from './KakaoChannel'
 import Backward from './Backward'
 
 const components = {
+    book: Book,
+    blockBooking: BlockBooking,
     confirm: Confirm,
     cancel: Cancel,
-    book: Book,
+    checkbox: CheckBox,
     edit: Edit,
     phone: Phone,
     kakao: Kakao,
@@ -18,13 +22,14 @@ const components = {
     backward: Backward,
 }
 
-function Buttons ({ className, name, text=null, disabled=false, disabledText=null, onClick=null, refer=null, visible=true }) {
+function Buttons ({ className, name, text=null, value=false, disabled=false, disabledText=null, onClick=null, refer=null, visible=true }) {
 
     const RenderElem = components[name]
 
     return <RenderElem 
         className={className} 
         text={text}
+        value={value}
         disabled={disabled}
         disabledText={disabledText}
         onClick={onClick} 

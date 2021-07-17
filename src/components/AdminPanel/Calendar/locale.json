@@ -1,0 +1,40 @@
+{
+    "lang": {
+        "locale": "ko_KR",
+        "placeholder": "날짜 선택",
+        "rangePlaceholder": ["시작일", "종료일"],
+        "today": "오늘",
+        "now": "지금",
+        "backToToday": "오늘로 돌아가기",
+        "ok": "확인",
+        "clear": "지우기",
+        "month": "월",
+        "year": "년",
+        "timeSelect": "시간 선택",
+        "dateSelect": "날짜 선택",
+        "monthSelect": "월 선택",
+        "yearSelect": "년도 선택",
+        "decadeSelect": "10년 단위 선택",
+        "yearFormat": "YYYY",
+        "dateFormat": "YYYY/M/D",
+        "dayFormat": "D",
+        "dateTimeFormat": "YYYY/M/D H:m",
+        "monthFormat": "M",
+        "monthBeforeYear": false,
+        "previousMonth": "이전 달 (PageUp)",
+        "nextMonth": "다음 달 (PageDown)",
+        "previousYear": "작년 (Ctrl + <-)",
+        "nextYear": "내년 (Ctrl + ->)",
+        "previousDecade": "지난 10년",
+        "nextDecade": "다음 10년",
+        "previousCentury": "이전 세기",
+        "nextCentury": "다음 세기"
+    },
+    "timePickerLocale": {
+        "placeholder": "시간 선택"
+    },
+    "dateFormat": "YYYY-M-D",
+    "dateTimeFormat": "YYYY-M-D H:m",
+    "weekFormat": "YYYY-wo",
+    "monthFormat": "YYYY-M"
+}

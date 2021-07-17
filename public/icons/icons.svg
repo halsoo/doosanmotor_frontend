@@ -7,13 +7,11 @@
         <path fill="current" fill-rule="nonzero" d="M15.41 16.59L10.83 12 15.41 7.41 14 6 8 12 14 18z"/>   
     </symbol>
 
-    <symbol id="block" width="24" height="24" viewBox="0 0 24 24">
-        <g fill="current" fill-rule="evenodd">
-            <g>
-                <path d="M0 0L24 0 24 24 0 24z"/>
-                <path fill="#123" fill-rule="nonzero" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z"/>
-            </g>
-        </g>
+    <symbol id="block" viewBox="0 0 24 24">
+        <path 
+            fill="current" 
+            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z"
+        />
     </symbol>
 
     <symbol id="calendar" viewBox="0 0 24 24">
@@ -24,32 +22,18 @@
         <path fill="current" fill-rule="nonzero" d="M9 16.2L4.8 12 3.4 13.4 9 19 21 7 19.6 5.6z"/>
     </symbol>
     
-    <symbol id="checkbox-off" width="24" height="24" viewBox="0 0 24 24">
-        <defs>
-            <filter id="b3dw6ls32a">
-                <feColorMatrix in="SourceGraphic" values="0 0 0 0 0.066355 0 0 0 0 0.132985 0 0 0 0 0.199615 0 0 0 1.000000 0"/>
-            </filter>
-        </defs>
-        <g fill="current" fill-rule="evenodd">
-            <g filter="url(#b3dw6ls32a)">
-                <path d="M0 0L24 0 24 24 0 24z"/>
-                <path fill="#000" fill-rule="nonzero" d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
-            </g>
-        </g>
+    <symbol id="checkbox-off" viewBox="0 0 24 24">
+        <path
+            fill="current"
+            d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+        />
     </symbol>
     
-    <symbol id="checkbox-on" width="24" height="24" viewBox="0 0 24 24">
-        <defs>
-            <filter id="9djpgz7mja">
-                <feColorMatrix in="SourceGraphic" values="0 0 0 0 0.066355 0 0 0 0 0.132985 0 0 0 0 0.199615 0 0 0 1.000000 0"/>
-            </filter>
-        </defs>
-        <g fill="current" fill-rule="evenodd">
-            <g filter="url(#9djpgz7mja)">
-                <path d="M0 0L24 0 24 24 0 24z"/>
-                <path fill="#000" fill-rule="nonzero" d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-            </g>
-        </g>
+    <symbol id="checkbox-on" viewBox="0 0 24 24">
+        <path 
+            fill="current" 
+            d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+        />
     </symbol>
     
     <symbol id="done" width="48" height="48" viewBox="0 0 48 48">

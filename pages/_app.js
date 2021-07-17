@@ -1,10 +1,14 @@
 import Head from 'next/head'
+import { useRouter } from 'next/router'
+
 import '../public/styles/tailwind.css'
 
 import Footer from '../src/components/Footer'
 
-
 function MyApp({ Component, pageProps }) {
+    const router = useRouter()
+    const isAdmin = router.pathname && router.pathname === '/admin' ? true : false
+    
     return (
         <main> 
             <Head>
@@ -15,7 +19,7 @@ function MyApp({ Component, pageProps }) {
                 <title>Doosan Motor</title>
             </Head>
             <Component {...pageProps} />
-            <Footer/>
+            { !isAdmin ? <Footer/> : null }
         </main>
     )
 }
