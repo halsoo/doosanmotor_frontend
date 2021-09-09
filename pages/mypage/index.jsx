@@ -23,7 +23,7 @@ function MyPage(props) {
                 const bookingInfos = [{
                     id: 'upcoming-001',
                     date: {
-                        start: 1626593400, // 21-07-18-16-30
+                        start: 1631255400, // 21-09-10-15-30
                         duration: 1800
                     },
                     customer: {
@@ -35,7 +35,7 @@ function MyPage(props) {
                 {
                     id: 'upcoming-002',
                     date: {
-                        start: 1629090000, // 21-08-16-14-00
+                        start: 1634272200, // 21-10-15-13-30
                         duration: 1800
                     },
                     customer: {

@@ -4,14 +4,18 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
     enabled: process.env.ANALYZE === 'true',
 })
 
-module.exports = withBundleAnalyzer({
-    webpack: (config) => {
-        return {
-            ...config,
-            plugins: [...config.plugins, new AntdDayjsWebpackPlugin()],
-        }
-    },
-})
+const withImages = require('next-images')
+
+module.exports = withImages(
+    withBundleAnalyzer({
+        webpack: (config) => {
+            return {
+                ...config,
+                plugins: [...config.plugins, new AntdDayjsWebpackPlugin()],
+            }
+        },
+    })
+)
 
 // const withAntdLess = require('next-plugin-antd-less')
 // const AntdDayjsWebpackPlugin = require('antd-dayjs-webpack-plugin')

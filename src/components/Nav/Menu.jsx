@@ -8,22 +8,22 @@ function Menu({ pathname, visible=false }) {
         {
             icon: "calendar",
             text: "예약하기",
-            path: "booking",
+            path: "/booking",
         },
         {
             icon: "todo",
             text: "내 예약 관리하기",
-            path: "mybooking",
+            path: "/mypage",
         },
         {
             icon: "tool",
             text: "검사 종류 알아보기",
-            path: "inspections",
+            path: "/inspections",
         },
         {
             icon: "info",
             text: "두산검사소 소개",
-            path: "about",
+            path: "/about",
         },
     ]
 
@@ -34,16 +34,20 @@ function Menu({ pathname, visible=false }) {
             <div className="w-auto flex flex-col fixed top-menu sm:inset-x-xl lg:inset-x-desktop">
                 {menuItems.map( (item, index) => {
                     return (
-                        <Partition 
-                            iconName={item.icon}
-                            iconCurr={item.path == pathname ? true : false}
-                            text={item.text}
-                            border={false}
-                            last={null}
-                            menu={true}
+                        <a 
+                            href={item.path}
                             key={`${item.icon}-${item.text}-${index}`}
-                            visible={visible}
-                        />
+                        >
+                            <Partition 
+                                iconName={item.icon}
+                                iconCurr={item.path == pathname ? true : false}
+                                text={item.text}
+                                border={false}
+                                last={null}
+                                menu={true}
+                                visible={visible}
+                            />
+                        </a>
                     )
                 })}
             </div>
